@@ -19,7 +19,7 @@ def lyrics():
         songnameOrig = songnameTk.get().lower()
 
         artistname = artistnameOrig.replace(' ', '_')
-        songname = songnameOrig.replace(' ', '_')
+        songname = songnameOrig.replace("&","%26").replace(' ', '_')
 
         url = '{}{}:{}'.format(url, artistname, songname)
         try:
